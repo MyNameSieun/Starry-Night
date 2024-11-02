@@ -1,0 +1,99 @@
+/* video */
+.video-container {
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.video-overlay {
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.video-overlay {
+  font-size: 24px;
+}
+
+.video-overlay > figcaption {
+  font-size: 64px;
+  position: absolute;
+  bottom: 30rem;
+  left: 75rem;
+}
+
+.video-overlay > p {
+  font-size: 64px;
+  position: absolute;
+  bottom: 20rem;
+  left: 75rem;
+  font-size: 24px;
+  line-height: 2.5;
+}
+
+/* APOD */
+h1 {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
+}
+
+.apod-text-box {
+  display: flex;
+  justify-content: center;
+}
+
+.apod-text-box img {
+  width: 26rem;
+  height: 26rem;
+  margin-right: 3rem;
+}
+.apod-text-box {
+  display: flex;
+}
+.apod-article > h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.apod-article p {
+  display: flex;
+  color: #a7a7a7;
+  width: 30rem;
+  line-height: 1.4rem;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.apod-article button {
+  width: 257px;
+  height: 51px;
+
+  color: white;
+  background-color: var(--bg-body-color);
+  border: 1px solid white;
+  border-radius: 230px;
+  cursor: pointer;
+  margin: 3rem 5.4rem;
+}
+.apod-article button:hover {
+  border: 1px solid var(--bg-main-color);
+}
+
+/* Astronomy Gallery */
+.gallery-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.gallery-image-container img {
+  width: 250px;
+  height: 250px;
+  margin: 0 1rem;
+}
