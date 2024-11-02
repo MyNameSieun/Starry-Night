@@ -1,0 +1,9 @@
+:root {
+  --bg-main-color: #ef504e;
+  --bg-body-color: #121212;
+}
+body {
+  background-color: var(--bg-body-color);
+  height: 100vh;
+  color: white;
+}
