@@ -53,10 +53,8 @@ h1 {
 }
 
 .apod-text-box img {
-  width: 26rem;
-  height: 26rem;
-  margin-right: 3rem;
-  width: 100%;
+  height: 28rem;
+  margin-right: 2rem;
   object-fit: cover;
 }
 .apod-text-box {

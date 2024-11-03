@@ -1,0 +1,65 @@
+body {
+  height: 100vh;
+}
+.apop-img-info {
+  display: flex;
+  margin-top: 4rem;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.puple-box {
+  width: 20px;
+  height: 80px;
+  background-color: var(--bg-main-color);
+}
+
+.apop-img-info h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.apop-img-info date {
+  font-size: 18px;
+  color: var(--bg-sub-color);
+}
+#apop-figure {
+  display: flex;
+  gap: 3rem;
+}
+
+#apop-figure img {
+  width: 460px;
+  object-fit: cover;
+}
+
+.apop-article p {
+  width: 35rem;
+  line-height: 1.4rem;
+}
+
+.apop-btn {
+  width: 460px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  white-space: nowrap;
+}
+
+.save-collection-btn {
+  color: white;
+  background-color: var(--bg-main-color);
+  padding: 1.3rem 3rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.view-details-btn {
+  color: white;
+  background-color: var(--bg-body-color);
+  border: 1px solid white;
+  padding: 1.3rem 4rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
