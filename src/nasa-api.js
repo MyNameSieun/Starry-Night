@@ -4,6 +4,7 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}`)
   .then((res) => res.json())
   .then((data) => {
     console.log("data", data);
+    document.querySelector(".apod-img-day").textContent = data.date;
     document.querySelector(".apod-text-box figure img").src = data.url;
     document.querySelector(".apod-text-box figure img").alt = data.title;
     document.querySelector(".apod-article h2").textContent = data.title;
@@ -16,13 +17,15 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}`)
 
 const fetchPastImages = () => {
   const galleryContainer = document.querySelector(".gallery-image-container");
-  const dates = [
-    "2024-11-01",
-    "2024-10-31",
-    "2024-10-30",
-    "2024-10-29",
-    "2024-10-28",
-  ];
+
+  const today = new Date();
+  const dates = [];
+
+  for (let i = 1; i <= 5; i++) {
+    const pastDate = new Date(today);
+    pastDate.setDate(today.getDate() - i);
+    dates.push(pastDate.toISOString().split("T")[0]);
+  }
 
   dates.forEach((date) =>
     fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=${api_key}`)

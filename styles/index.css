@@ -37,18 +37,27 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
+}
+.apod-img-day {
+  display: flex;
+  justify-content: center;
   margin-bottom: 6rem;
+  color: var(--bg-sub-color);
+  margin-top: 1rem;
 }
 
 .apod-text-box {
   display: flex;
   justify-content: center;
+  gap: 6rem;
 }
 
 .apod-text-box img {
   width: 26rem;
   height: 26rem;
   margin-right: 3rem;
+  width: 100%;
+  object-fit: cover;
 }
 .apod-text-box {
   display: flex;
@@ -59,7 +68,7 @@ h1 {
 }
 .apod-article p {
   display: flex;
-  color: #a7a7a7;
+  color: var(--bg-sub-color);
   width: 30rem;
   line-height: 1.4rem;
 
@@ -85,15 +94,25 @@ h1 {
 }
 
 /* Astronomy Gallery */
+#astronomy-gallery h1 {
+  margin-bottom: 6rem;
+}
+
 .gallery-image-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 6rem;
+  gap: 10px;
+}
+
+.gallery-image-container figure {
+  width: 100%;
 }
 
 .gallery-image-container img {
-  width: 250px;
   height: 250px;
   margin: 0 1rem;
+  width: 100%;
+  object-fit: cover;
 }
