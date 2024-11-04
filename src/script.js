@@ -1,6 +1,6 @@
-import { api_key } from "./apikey.js";
+import { NASA_API_KEY } from "./apikey.js";
 
-fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}`)
+fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
   .then((res) => res.json())
   .then((data) => {
     console.log("data", data);
@@ -28,7 +28,9 @@ const fetchPastImages = () => {
   }
 
   dates.forEach((date) =>
-    fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=${api_key}`)
+    fetch(
+      `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${NASA_API_KEY}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.media_type === "image") {

@@ -1,6 +1,6 @@
-import { api_key } from "./apikey.js";
+import { NASA_API_KEY } from "./apikey.js";
 
-fetch(`https://api.nasa.gov/planetary/apod?api_key=${api_key}`)
+fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
   .then((res) => res.json())
   .then((data) => {
     console.log("APOD 데이터", data);
