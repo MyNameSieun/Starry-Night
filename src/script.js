@@ -21,7 +21,7 @@ const fetchPastImages = () => {
   const today = new Date();
   const dates = [];
 
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 4; i++) {
     const pastDate = new Date(today);
     pastDate.setDate(today.getDate() - i);
     dates.push(pastDate.toISOString().split("T")[0]);

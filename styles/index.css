@@ -98,6 +98,7 @@ h1 {
 }
 .apod-article button:hover {
   border: 1px solid var(--bg-main-color);
+  transition: border-color 0.3s ease;
 }
 
 /* Astronomy Gallery */
@@ -106,6 +107,7 @@ h1 {
 }
 
 .gallery-image-container {
+  margin: 0 20rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -123,3 +125,5 @@ h1 {
   width: 100%;
   object-fit: cover;
 }
+outline: none;
+transition: border-color 0.3s ease;
