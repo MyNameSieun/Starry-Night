@@ -1,0 +1,31 @@
+body {
+  margin: 0 20rem;
+}
+/* gallery-section */
+
+#gallery-section {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#gallery-section figure {
+}
+#gallery-section img {
+  width: 14%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* gallery-article  */
+#gallery-article {
+  width: 50%;
+}
+#gallery-article img {
+  position: fixed;
+  top: 6rem;
+  right: 24rem;
+  width: 460px;
+}

@@ -1,5 +1,11 @@
+nav {
+  margin: 2rem 20rem;
+}
+
 /* video */
 .video-container {
+  display: flex;
+  justify-content: center;
   position: relative;
   white-space: nowrap;
   width: 100%;
@@ -37,6 +43,9 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
+}
+#apod-section {
+  margin: 0 20rem;
 }
 .apod-img-day {
   display: flex;
