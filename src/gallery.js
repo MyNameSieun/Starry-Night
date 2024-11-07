@@ -1,5 +1,10 @@
 const monthInput = document.querySelector("input[type='month']");
 
+// 클릭 발생하면 달력 열기
+monthInput.addEventListener("click", () => {
+  monthInput.showPicker();
+});
+
 // 현재 날짜를 기준으로 자동으로 설정
 document.addEventListener("DOMContentLoaded", () => {
   const today = new Date();

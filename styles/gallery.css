@@ -1,16 +1,33 @@
 body {
   margin: 0 20rem;
 }
+
+form {
+  margin: 2rem 0;
+}
+
+/* input 스타일 */
+form input[type="month"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
 /* gallery-section */
 
 #gallery-section {
-  width: 60%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 7rem;
 }
 
-#gallery-section figure {
+#gallery-section figcaption {
+  margin-top: 1rem;
 }
 #gallery-section img {
   width: 14%;
