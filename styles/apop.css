@@ -36,7 +36,8 @@ body {
 
 .apop-article p {
   width: 35rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--bg-sub-color);
 }
 
 .apop-btn {

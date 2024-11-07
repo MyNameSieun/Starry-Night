@@ -7,4 +7,5 @@ body {
   background-color: var(--bg-body-color);
   height: 100vh;
   color: white;
+  font-family: "Pretendard-Regular", sans-serif;
 }
