@@ -1,12 +1,13 @@
 import { NASA_API_KEY } from "./apikey.js";
 
+// APOD API에서 데이터 가져오기
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
   .then((res) => res.json())
   .then((data) => {
     console.log("APOD 데이터", data);
 
     document.querySelector(".apop-img-info h2").textContent = data.title;
-    document.querySelector(".apop-img-info date").textContent = data.date;
+    document.querySelector(".apop-img-info time").textContent = data.date;
 
     const imgElement = document.querySelector("#apop-figure img");
     imgElement.src = data.url;
@@ -23,12 +24,27 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
 document.querySelector(".save-collection-btn").addEventListener("click", () => {
   const apopData = {
     title: document.querySelector(".apop-img-info h2").innerText,
-    date: document.querySelector(".apop-img-info date").innerText,
-    img: document.querySelector("#apop-figure img").src,
+    date: document.querySelector(".apop-img-info time").innerText,
+    imgSrc: document.querySelector("#apop-figure img").src,
     description: document.querySelector(".apop-article p").innerText,
-    link: document.querySelector(".apop-btn a").innerText,
+    link: document.querySelector(".apop-btn a").getAttribute("href"),
   };
-  localStorage.setItem("collection", apopData);
+
+  // 로컬 스토리지에서 기존 콜렉션 가져오기
+  const collection = JSON.parse(localStorage.getItem("collection")) || [];
+
+  // 이미 저장된 데이터와 중복되는지 확인
+  const isAlreadySaved = collection.some(
+    (item) => item.imgSrc === apopData.imgSrc
+  );
+
+  if (isAlreadySaved) {
+    return alert("이미 콜렉션에 저장된 이미지입니다.");
+  }
+
+  collection.push(apopData); // 배열에 새 데이터 추가
+
+  localStorage.setItem("collection", JSON.stringify(collection)); // 배열 저장
 
   alert("Collection에 저장되었습니다!");
 });
