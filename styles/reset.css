@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  margin: 2rem 20rem;
 }
 ol,
 ul {
@@ -140,7 +141,6 @@ main {
 
 /* navbar */
 nav {
-  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
 }
@@ -150,10 +150,12 @@ nav {
 
 /* footer */
 footer {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  margin-bottom: 3rem;
+  height: 6rem;
 }
 
 footer p {
