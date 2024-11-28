@@ -18,3 +18,17 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
     viewDetailsLink.href = data.url;
   })
   .catch((error) => console.log(error));
+
+// 로컬 스토리지에 콜렉션 저장
+document.querySelector(".save-collection-btn").addEventListener("click", () => {
+  const apopData = {
+    title: document.querySelector(".apop-img-info h2").innerText,
+    date: document.querySelector(".apop-img-info date").innerText,
+    img: document.querySelector("#apop-figure img").src,
+    description: document.querySelector(".apop-article p").innerText,
+    link: document.querySelector(".apop-btn a").innerText,
+  };
+  localStorage.setItem("collection", apopData);
+
+  alert("Collection에 저장되었습니다!");
+});
