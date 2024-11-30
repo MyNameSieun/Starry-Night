@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const img = document.createElement("img");
     img.src = item.imgSrc;
     img.alt = item.title;
+
     figure.appendChild(img);
 
     const figcaption = document.createElement("figcaption");
@@ -17,6 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     figure.appendChild(figcaption);
 
     collectionSection.appendChild(figure);
+
+    // 이미지 클릭 시 상세 페이지로 이동
+    img.addEventListener("click", () => {
+      localStorage.setItem("selectedImage", JSON.stringify(item));
+      window.location.href = "collection-details.html";
+    });
   });
   if (collection.length == 0) {
     const message = document.createElement("p");
