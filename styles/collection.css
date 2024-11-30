@@ -23,18 +23,21 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  overflow: hidden;
 }
 #collection-section figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   border: 1px solid var(--bg-sub-color);
-  padding: 3rem 1rem;
+  padding: 1rem 1rem 2.5rem 1rem;
   border-radius: 6px;
   position: relative;
 }
 #collection-section figcaption {
-  position: absolute;
-  bottom: 1rem;
-  left: 6.5rem;
+  margin-top: 1rem;
 }
 
 #collection-section img {
