@@ -24,4 +24,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// 콜렉션 저장
+// 로컬 스토리지에 콜렉션 저장
+document.querySelector(".save-collection-btn").addEventListener("click", () => {
+  const apopData = {
+    title: document.querySelector("#collection-title").innerText,
+    date: document.querySelector("#collection-date").innerText,
+    imgSrc: document.querySelector("#collection-image").src,
+    description: document.querySelector("#collection-description").innerText,
+    link: document.querySelector(".description-btn a").getAttribute("href"),
+  };
+
+  // 로컬 스토리지에서 기존 콜렉션 가져오기
+  const collection = JSON.parse(localStorage.getItem("collection")) || [];
+
+  // 이미 저장된 데이터와 중복되는지 확인
+  const isAlreadySaved = collection.some(
+    (item) => item.imgSrc === apopData.imgSrc
+  );
+
+  if (isAlreadySaved) {
+    return alert("이미 콜렉션에 저장된 이미지입니다.");
+  }
+
+  collection.push(apopData); // 배열에 새 데이터 추가
+
+  localStorage.setItem("collection", JSON.stringify(collection)); // 배열 저장
+
+  alert("Collection에 저장되었습니다!");
+});

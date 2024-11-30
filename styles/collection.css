@@ -1,4 +1,4 @@
-#collection-search-form {
+/* #collection-search-form {
   display: flex;
   justify-content: end;
   margin: 2rem 0;
@@ -16,7 +16,7 @@
 #collection-search-form input:hover,
 #collection-search-form input:focus {
   border-color: var(--bg-main-color);
-}
+} */
 
 #collection-section {
   display: flex;
@@ -24,6 +24,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   overflow: hidden;
+  margin-top: 4rem;
 }
 #collection-section figure {
   display: flex;
@@ -35,15 +36,16 @@
   padding: 1rem 1rem 2.5rem 1rem;
   border-radius: 6px;
   position: relative;
+  cursor: pointer;
 }
 #collection-section figcaption {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 #collection-section img {
   width: 100%;
+  height: 200px;
   object-fit: cover;
-  cursor: pointer;
 }
 footer {
   margin: 6rem;

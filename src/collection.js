@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     collectionSection.appendChild(figure);
 
-    // 이미지 클릭 시 상세 페이지로 이동
-    img.addEventListener("click", () => {
+    // figure  클릭 시 상세 페이지로 이동
+    figure.addEventListener("click", () => {
       localStorage.setItem("selectedImage", JSON.stringify(item));
       window.location.href = "collection-details.html";
     });
