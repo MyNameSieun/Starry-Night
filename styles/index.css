@@ -118,6 +118,5 @@ h1 {
 .gallery-image-container img {
   height: 250px;
   margin: 0 1rem;
-  width: 100%;
   object-fit: cover;
 }
