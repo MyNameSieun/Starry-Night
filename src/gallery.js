@@ -80,6 +80,6 @@ const fetchImagesForMonth = (startDate, endDate, galleryContainer) => {
           });
         }
       })
-      .catch((error) => console.error("Error fetching image:", error));
+      .catch((error) => console.error("error:", error));
   }
 };

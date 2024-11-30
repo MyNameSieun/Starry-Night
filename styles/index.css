@@ -39,6 +39,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
+  white-space: nowrap;
 }
 #apod-section {
   margin: 0 20rem;
@@ -112,7 +113,6 @@ h1 {
 }
 
 .gallery-image-container figure {
-  width: 100%;
 }
 
 .gallery-image-container img {

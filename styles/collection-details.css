@@ -11,10 +11,15 @@
   margin-bottom: 6rem;
 }
 
-.puple-box {
-  width: 20px;
-  height: 80px;
+.bg-puple-box {
+  position: absolute;
   background-color: var(--bg-main-color);
+  z-index: -100;
+  left: 21rem;
+  top: 15rem;
+  width: 460px;
+  height: 500px;
+  border-radius: 10px;
 }
 
 .collection-img-info h2 {
@@ -34,6 +39,7 @@
   width: 460px;
   height: 500px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .material-symbols-outlined {
@@ -47,7 +53,7 @@
   background-color: var(--bg-main-color);
   z-index: -100;
   left: 22rem;
-  top: 19rem;
+  top: 15rem;
   width: 460px;
   height: 500px;
 }
@@ -78,7 +84,7 @@
   color: white;
   background-color: var(--bg-body-color);
   border: 1px solid white;
-  padding: 1.3rem 4rem;
+  padding: 1.3rem 3rem;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;

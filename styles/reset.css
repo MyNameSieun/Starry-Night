@@ -172,3 +172,8 @@ footer img {
   height: 2rem;
   margin-left: 0.5rem;
 }
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}

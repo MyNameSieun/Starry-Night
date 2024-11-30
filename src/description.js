@@ -52,3 +52,16 @@ document.querySelector(".save-collection-btn").addEventListener("click", () => {
 
   alert("Collection에 저장되었습니다!");
 });
+
+// 보라색 박스 크기 동적 조절
+document.addEventListener("DOMContentLoaded", function () {
+  const image = document.querySelector("#collection-image");
+  const purpleBox = document.querySelector(".bg-puple-box");
+
+  image.onload = function () {
+    const imageWidth = image.width;
+
+    purpleBox.style.width = `${imageWidth}px`;
+    purpleBox.style.height = `${imageHeight}px`;
+  };
+});
