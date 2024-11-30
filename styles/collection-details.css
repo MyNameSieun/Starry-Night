@@ -1,0 +1,85 @@
+.material-symbols-outlined {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.collection-img-info {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.puple-box {
+  width: 20px;
+  height: 80px;
+  background-color: var(--bg-main-color);
+}
+
+.collection-img-info h2 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.collection-img-info date {
+  font-size: 18px;
+  color: var(--bg-sub-color);
+}
+#collection-figure {
+  display: flex;
+  gap: 3rem;
+}
+
+#collection-figure img {
+  width: 460px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.material-symbols-outlined {
+  color: var(--bg-main-color);
+  font-size: 48px !important;
+  font-weight: bold !important;
+  margin: 0;
+}
+.bg-puple-box {
+  position: absolute;
+  background-color: var(--bg-main-color);
+  z-index: -100;
+  left: 22rem;
+  top: 19rem;
+  width: 460px;
+  height: 500px;
+}
+.collection-article p {
+  line-height: 1.6rem;
+  color: var(--bg-sub-color);
+  margin-left: 3rem;
+}
+
+.collection-btn {
+  width: 460px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7rem;
+  margin-bottom: 6rem;
+  white-space: nowrap;
+}
+
+.save-collection-btn {
+  color: white;
+  background-color: var(--bg-main-color);
+  padding: 1.3rem 3rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.view-details-btn {
+  color: white;
+  background-color: var(--bg-body-color);
+  border: 1px solid white;
+  padding: 1.3rem 4rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}

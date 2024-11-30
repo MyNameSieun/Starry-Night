@@ -29,18 +29,28 @@
   height: 500px;
   object-fit: cover;
 }
+.bg-puple-box {
+  position: absolute;
+  background-color: var(--bg-main-color);
+  z-index: -100;
+  left: 22rem;
+  top: 20rem;
+  width: 460px;
+  height: 500px;
+}
 
 .apop-article p {
   width: 35rem;
   line-height: 1.6rem;
   color: var(--bg-sub-color);
+  margin-left: 3rem;
 }
 
 .apop-btn {
   width: 460px;
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin-top: 7rem;
   margin-bottom: 6rem;
   white-space: nowrap;
 }

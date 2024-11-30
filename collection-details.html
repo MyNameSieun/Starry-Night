@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/collection-details.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios"
+    />
   </head>
   <body>
     <!-- nabar -->
@@ -24,10 +28,28 @@
     <!-- main -->
     <main>
       <div>
-        <section id="collection-section">
-          <img id="collection-image" src="" alt="" />
-          <h2 id="collection-title"></h2>
-          <p id="collection-description"></p>
+        <section>
+          <div class="collection-img-info">
+            <a href="./gallery.html">
+              <span class="material-symbols-outlined">arrow_back_ios</span>
+            </a>
+            <div>
+              <h2 id="collection-title"></h2>
+              <time id="collection-date"></time>
+            </div>
+          </div>
+
+          <figure id="collection-figure">
+            <div class="bg-puple-box"></div>
+            <img id="collection-image" />
+            <article class="collection-article">
+              <p id="collection-description"></p>
+            </article>
+          </figure>
+          <div class="collection-btn">
+            <button class="save-collection-btn">Save to Collection</button>
+            <a class="view-details-btn" href="" target="_blank">View Details</a>
+          </div>
         </section>
       </div>
     </main>
