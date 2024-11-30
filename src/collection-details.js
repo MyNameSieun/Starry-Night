@@ -29,14 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const deleteBtn = document.querySelector(".delete-collection-btn");
 deleteBtn.addEventListener("click", () => {
-  localStorage.removeItem("collection");
-
   const deleteConfirm = window.confirm("정말 삭제하시겠습니까?");
-  if (deleteConfirm == true) {
-    alert("collection을 삭제하였습니다.");
+  if (deleteConfirm) {
+    localStorage.removeItem("collection");
+    ("collection을 삭제하였습니다.");
+    return (window.location.href = "collection.html");
   } else {
     return;
   }
-
-  window.location.href = "collection.html";
 });
