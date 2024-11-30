@@ -20,7 +20,11 @@
       </div>
       <div class="nav-right">
         <a href="apop.html">APOD</a>
-        <a href="gallery.html">Gallery</a>
+        <a
+          href="gallery.html"
+          style="font-weight: bold; color: var(--bg-main-color)"
+          >Gallery</a
+        >
         <a href="collection.html">Collection</a>
       </div>
     </nav>
@@ -34,39 +38,26 @@
               <span class="material-symbols-outlined">arrow_back_ios</span>
             </a>
             <div>
-              <h2>Astronomy Picture of the Day</h2>
-              <time>2024-11-30</time>
+              <h2 id="collection-title"></h2>
+              <time id="collection-date"></time>
             </div>
           </div>
 
           <figure id="description-figure">
             <div class="bg-puple-box"></div>
-            <img src="./source/images/CometaryGlobs_Pugh_1080.jpg" />
+            <img src="" alt="" id="collection-image" />
             <article class="description-article">
-              <p>
+              <p id="collection-description">
                 겨울철에 접어들면 추위 말고 또다른 불청객이 우리를 찾아온다.
                 바로 미세먼지다. 겨울에는 특히 미세먼지보다 더 강력한
                 초미세먼지가 위협을 떨친다. 난방 등으로 초미세먼지를 유발하는
                 물질이 더 많이 배출되기 때문이다. 게다가 날씨가 추워 초미세먼지
-                유발물질이 날아가지 않고 안정적으로 대기에 머물게 된다. 30일
-                국립환경과학원에 따르면 올 겨울 초미세먼지 평균 농도는 50%의
-                확률로 전년 대비 높을 것으로 예상된다. 평년 대비로는 각각 40%의
-                확률로 유사하거나 낮을 것으로 관측된다. 나쁨 이상 일수는 각
-                40%의 확률로 전년 대비 유사하거나 많을 전망이다. 대기 정체로
-                인한 국내 오염물질 축적으로 인해 이처럼 초미세먼지 농도가 높아질
-                것으로 분석된다. 기상청에 따르면 올 겨울 한국은 고기압성 순환을
-                자주 받을 것으로 보인다. 북서태평양, 인도양과 대서양의 높은
-                해수면 온도와 티베트의 적은 눈덮임 영향 때문이다. 고기압성
-                순환이 강화되면 대기가 안정된다. 때문에 초미세먼지가 더 장시간
-                대기에 머물게 된다.
               </p>
             </article>
           </figure>
           <div class="description-btn">
-            <button class="save-collection-btn">View Details</button>
-            <a class="view-details-btn" href="" target="_blank"
-              >Save Collection</a
-            >
+            <button class="save-collection-btn">Save Collection</button>
+            <a class="view-details-btn" href="" target="_blank">View Details</a>
           </div>
         </section>
       </div>
@@ -87,5 +78,6 @@
         </a>
       </div>
     </footer>
+    <script src="./src/description.js"></script>
   </body>
 </html>

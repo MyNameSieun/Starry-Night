@@ -69,6 +69,15 @@ const fetchImagesForMonth = (startDate, endDate, galleryContainer) => {
           figure.appendChild(img);
           figure.appendChild(figcaption);
           galleryContainer.appendChild(figure);
+
+          // 이미지 클릭 시 상세 페이지로 이동
+          img.addEventListener("click", () => {
+            localStorage.setItem("selectedImage", JSON.stringify(data));
+
+            // const storedData = localStorage.getItem("selectedImage");
+            // console.log(storedData); // 저장된 데이터 출력
+            window.location.href = "description.html"; // 페이지 이동
+          });
         }
       })
       .catch((error) => console.error("Error fetching image:", error));
