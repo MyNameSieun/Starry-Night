@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   if (collection.length == 0) {
     const message = document.createElement("p");
-    message.innerHTML = "현재 콜렉션에 저장된 이미지가 없습니다.";
+    message.innerHTML =
+      "There are no images currently saved in the collection.";
     collectionSection.appendChild(message);
   }
 });

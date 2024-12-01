@@ -13,13 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     title.innerText = selectedImage.title;
     date.innerHTML = selectedImage.date;
-    description.innerText = selectedImage.explanation || "설명이 없습니다.";
+    description.innerText =
+      selectedImage.explanation || "There is no description.";
 
     const viewDetailsLink = document.querySelector(".view-details-btn");
     viewDetailsLink.href = selectedImage.url;
   } else {
     const message = document.createElement("p");
-    message.innerHTML = "이미지가 선택되지 않았습니다.";
+    message.innerHTML = "No image selected.";
     document.querySelector("section").appendChild(message);
   }
 });
@@ -43,14 +44,14 @@ document.querySelector(".save-collection-btn").addEventListener("click", () => {
   );
 
   if (isAlreadySaved) {
-    return alert("이미 콜렉션에 저장된 이미지입니다.");
+    return alert("The image is already saved in the collection.");
   }
 
   collection.push(apopData); // 배열에 새 데이터 추가
 
   localStorage.setItem("collection", JSON.stringify(collection)); // 배열 저장
 
-  alert("Collection에 저장되었습니다!");
+  alert("Saved to the collection!");
 });
 
 // 보라색 박스 크기 동적 조절

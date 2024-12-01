@@ -4,7 +4,7 @@ import { NASA_API_KEY } from "./apikey.js";
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
   .then((res) => res.json())
   .then((data) => {
-    console.log("APOD 데이터", data);
+    // console.log("APOD 데이터", data);
 
     document.querySelector(".apop-img-info h2").textContent = data.title;
     document.querySelector(".apop-img-info time").textContent = data.date;
@@ -39,14 +39,14 @@ document.querySelector(".save-collection-btn").addEventListener("click", () => {
   );
 
   if (isAlreadySaved) {
-    return alert("이미 콜렉션에 저장된 이미지입니다.");
+    return alert("The image is already saved in the collection.");
   }
 
   collection.push(apopData); // 배열에 새 데이터 추가
 
   localStorage.setItem("collection", JSON.stringify(collection)); // 배열 저장
 
-  alert("Collection에 저장되었습니다!");
+  alert("Saved to the collection!");
 });
 
 // 보라색 박스 크기 동적 조절

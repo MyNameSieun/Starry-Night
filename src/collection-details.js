@@ -16,23 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     title.innerText = selectedImage.title;
     date.innerHTML = selectedImage.date;
-    description.innerText = selectedImage.description || "설명이 없습니다.";
+    description.innerText =
+      selectedImage.description || "There is no description available.";
 
     const viewDetailsLink = document.querySelector(".view-details-btn");
     viewDetailsLink.href = selectedImage.link;
   } else {
     const message = document.createElement("p");
-    message.innerHTML = "이미지가 선택되지 않았습니다.";
+    message.innerHTML = "The image has not been selected.";
     document.querySelector("section").appendChild(message);
   }
 });
 
 const deleteBtn = document.querySelector(".delete-collection-btn");
 deleteBtn.addEventListener("click", () => {
-  const deleteConfirm = window.confirm("정말 삭제하시겠습니까?");
+  const deleteConfirm = window.confirm("Are you sure you want to delete this?");
   if (deleteConfirm) {
     localStorage.removeItem("collection");
-    ("collection을 삭제하였습니다.");
+    ("The collection has been deleted.");
     return (window.location.href = "collection.html");
   } else {
     return;
