@@ -107,7 +107,6 @@ section {
 }
 body {
   line-height: 1;
-  margin: 2rem 20rem;
 }
 ol,
 ul {
@@ -175,5 +174,22 @@ footer img {
 
 img {
   -webkit-user-drag: none;
-  user-drag: none;
+}
+
+/* 반응형 웹 */
+@media (max-width: 940px) {
+  body {
+    margin: 2rem 5rem;
+  }
+}
+@media (min-width: 941px) and (max-width: 1669px) {
+  body {
+    margin: 2rem 10rem;
+  }
+}
+
+@media (min-width: 1670px) {
+  body {
+    margin: 2rem 20rem;
+  }
 }

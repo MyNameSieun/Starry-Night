@@ -79,6 +79,7 @@ h1 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;
+  line-clamp: 10;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -110,9 +111,6 @@ h1 {
   justify-content: center;
   margin-bottom: 6rem;
   gap: 10px;
-}
-
-.gallery-image-container figure {
 }
 
 .gallery-image-container img {
