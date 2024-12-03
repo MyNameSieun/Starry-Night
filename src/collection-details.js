@@ -28,15 +28,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// 'Delete Collection' 버튼 클릭 시, 선택된 이미지만 삭제
 const deleteBtn = document.querySelector(".delete-collection-btn");
 deleteBtn.addEventListener("click", () => {
-  const deleteConfirm = window.confirm("Are you sure you want to delete this?");
-  if (deleteConfirm) {
-    localStorage.removeItem("collection");
-    ("The collection has been deleted.");
-    return (window.location.href = "collection.html");
+  const selectedImage = JSON.parse(localStorage.getItem("selectedImage"));
+
+  if (selectedImage) {
+    const collection = JSON.parse(localStorage.getItem("collection")) || [];
+
+    // 삭제할 항목을 제외한 새로운 배열 생성
+    const updatedCollection = collection.filter(
+      (item) => item.title !== selectedImage.title
+    );
+
+    localStorage.setItem("collection", JSON.stringify(updatedCollection));
+
+    window.alert("The selected image has been deleted.");
+    window.location.href = "collection.html";
   } else {
-    return;
+    window.alert("No image selected to delete.");
   }
 });
 
