@@ -11,7 +11,6 @@ form input[type="month"] {
 }
 
 /* gallery-section */
-
 #gallery-section {
   display: flex;
   justify-content: center;
@@ -28,7 +27,6 @@ form input[type="month"] {
   line-height: 1.3rem;
 }
 #gallery-section img {
-  width: 14%;
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -40,7 +38,6 @@ form input[type="month"] {
   width: 50%;
 }
 #gallery-article img {
-  position: fixed;
   top: 6rem;
   right: 24rem;
   width: 460px;

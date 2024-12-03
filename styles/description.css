@@ -1,6 +1,8 @@
 .material-symbols-outlined {
-  margin-top: 3rem;
   cursor: pointer;
+  color: var(--bg-main-color);
+  font-size: 48px !important;
+  font-weight: bold !important;
 }
 
 .description-img-info {
@@ -40,13 +42,6 @@
   height: 500px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.material-symbols-outlined {
-  color: var(--bg-main-color);
-  font-size: 48px !important;
-  font-weight: bold !important;
-  margin: 0;
 }
 
 .description-article p {
