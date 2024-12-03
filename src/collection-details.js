@@ -36,23 +36,23 @@ deleteBtn.addEventListener("click", () => {
   if (selectedImage) {
     const collection = JSON.parse(localStorage.getItem("collection")) || [];
 
-    // 삭제할 항목을 제외한 새로운 배열 생성
-    const updatedCollection = collection.filter(
-      (item) => item.title !== selectedImage.title
-    );
-
-    localStorage.setItem("collection", JSON.stringify(updatedCollection));
-
     const deleteConfirm = window.confirm(
       "Are you sure you want to delete this?"
     );
     if (deleteConfirm) {
       window.alert("The selected image has been deleted.");
+
+      // 삭제할 항목을 제외한 새로운 배열 생성
+      const updatedCollection = collection.filter(
+        (item) => item.title !== selectedImage.title
+      );
+
+      localStorage.setItem("collection", JSON.stringify(updatedCollection));
+
+      window.location.href = "collection.html";
     } else {
       return;
     }
-
-    window.location.href = "collection.html";
   } else {
     window.alert("No image selected to delete.");
   }
