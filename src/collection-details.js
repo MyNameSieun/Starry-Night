@@ -43,7 +43,15 @@ deleteBtn.addEventListener("click", () => {
 
     localStorage.setItem("collection", JSON.stringify(updatedCollection));
 
-    window.alert("The selected image has been deleted.");
+    const deleteConfirm = window.confirm(
+      "Are you sure you want to delete this?"
+    );
+    if (deleteConfirm) {
+      window.alert("The selected image has been deleted.");
+    } else {
+      return;
+    }
+
     window.location.href = "collection.html";
   } else {
     window.alert("No image selected to delete.");
